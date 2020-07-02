@@ -10,8 +10,8 @@ import Alamofire
 
 final class ITunesSearchService {
     
-    public typealias CompletionApps = (Result<[ITunesApp]>) -> Void
-    public typealias CompletionSongs = (Result<[ITunesSong]>) -> Void
+    public typealias CompletionApps = (Alamofire.AFResult<[ITunesApp]>) -> Void
+    public typealias CompletionSongs = (Alamofire.AFResult<[ITunesSong]>) -> Void
     
     private let networkManager = NetworkManager()
     private let decoder = JSONDecoder()

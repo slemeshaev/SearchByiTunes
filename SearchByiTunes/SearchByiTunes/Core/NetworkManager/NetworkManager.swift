@@ -15,7 +15,7 @@ final class NetworkManager {
     public typealias JSONCompletion = (Result<[String: Any]?>) -> Void
     
     public func dataRequest(_ request: WebRequest, then completion: DataCompletion?) {
-        Alamofire.request(request.url, method: request.method, parameters: request.parameters).validate().responseData { [weak self] response in
+        AF.request(request.url, method: request.method, parameters: request.parameters).validate().responseData { [weak self] response in
             response.result
                 .withValue { data in
                     completion?(.success(data))
@@ -28,7 +28,7 @@ final class NetworkManager {
     }
     
     public func jsonRequest(_ request: WebRequest, then completion: JSONCompletion?) {
-        Alamofire.request(request.url, method: request.method, parameters: request.parameters).validate().responseJSON { [weak self] response in
+        AF.request(request.url, method: request.method, parameters: request.parameters).validate().responseJSON { [weak self] response in
             response.result
                 .withValue { json in
                     completion?(.success(json as? [String: Any]))

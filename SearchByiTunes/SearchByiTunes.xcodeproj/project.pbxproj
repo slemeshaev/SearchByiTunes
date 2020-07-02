@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -337,7 +337,6 @@
 				B1E7E756C9E0023D710FB6C5 /* Pods-SearchByiTunes.debug.xcconfig */,
 				9CAEE4A1E442B0D91EBA1224 /* Pods-SearchByiTunes.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};

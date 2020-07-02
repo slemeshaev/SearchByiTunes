@@ -61,7 +61,6 @@ final class SearchViewController: UIViewController {
         self.throbber(show: false)
     }
     
-    /
 }
 
 //MARK: - UITableViewDataSource
