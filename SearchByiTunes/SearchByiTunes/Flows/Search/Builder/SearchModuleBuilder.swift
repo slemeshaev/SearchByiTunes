@@ -6,4 +6,14 @@
 //  Copyright © 2020 Станислав Лемешаев. All rights reserved.
 //
 
-import Foundation
+import UIKit
+
+final class SearchModuleBuilder {
+    static func build() -> (UIViewController & SearchViewInput) {
+        let presenter = SearchPresenter()
+        let viewController = SearchViewController(presenter: presenter)
+        presenter.viewInput = viewController
+        return viewController
+    }
+}
+
